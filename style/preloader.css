@@ -1,0 +1,58 @@
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c4c4c2;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.1s all;
+}
+.done{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader{
+    width: 80px;
+    height: 80px;
+    background-color: #ca0c39;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 17px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.loaderDone{
+    transform: scale(0);
+}
+.ovalWrapper{
+    position: absolute;
+    width: 80px;
+    left: -50%;
+    top: 50%;
+    transform-origin: 100% 0;
+    animation: oval 1.5s infinite;
+}
+.oval{
+    width: 20px;
+    height: 20px;
+    background: #ca0c39;
+    border-radius: 50%;
+}
+@keyframes oval {
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}

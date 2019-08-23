@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Scroll bar enabled - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,scrollbar,scroll,bar,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" type="text/css" href="style/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="style/examples.css" />
+	<link rel="stylesheet" type="text/css" href="style/preloader.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
+	<style>
+		.s1{
+    		background-image: url(images/fon.jpeg);
+    		overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="preloader" id="page-preloader">
+		<div class="loader">
+			Access
+			<div class="ovalWrapper">
+				<div class="oval"></div>
+			</div>
+		</div>
+	</div>
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+</ul>
+	
+<div id="fullpage">
+	<div class="section s1">
+        <div class="header">
+			<h1>Sie verdienen mehr? <br>Das finden wir auch.</h1>
+			 <p>id eos dolores omnis dolorum voluptates! Adipisci quos asperiores enim mollitia<br>
+				 consequuntur pariatur facilis! mollitia consequuntur pariatur facilis id eos dolores<br>
+				 omnis dolorum voluptates! Adipisci quos asperiores enim  mollitia consequuntur pariatur facilis
+			 </p>
+		 </div>
+		 <div class="klor" id="redOval"></div>
+	</div>
+	<div class="section s2" >
+		<img src="images/template.png" alt="" class="decor1" data-aos="fade-right" data-aos-duration="2000">
+		<div class="videWrapper">
+			<div class="left">
+				<div class="card" data-aos="flip-left" data-aos-duration="1100">
+					<div class="card-item">
+						<img src="images/4444444.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<h1>Suits and T-Shirts</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+						Eaque rem incidunt, doloribus numquam consequatur voluptates<br> 
+						quisquam odio a corrupti eum? Aliquam molestias repellat sint <br>
+						cupiditate nihil maxime totam, illum quas?
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="section s3">
+		<div class="sliderWrapper">
+			<div class="images" id="img" data-aos="fade-down" data-aos-duration="1100">
+				<div id="slider" >
+					<section >1</section>
+					<section>2</section>
+					<section>3</section>
+					<section>4</section>
+					<section>5</section>
+					<section>6</section>
+					<section>7</section>
+				</div>
+			</div>
+			<div class="divInputRange">
+				<input type="range" min="0" value="0" class="slider" id="myRange">
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="main/fullpage.js"></script>
+<script type="text/javascript" src="main/examples.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="text/javascript" src="main/preloader.js"></script>
+<script type="text/javascript">
+	AOS.init({
+		once: false,
+	});
+    new fullpage('#fullpage', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		scrollBar: true,
+		menu: '#menu',
+		easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
+        slidesNavigation: true,
+    });
+</script>
+
+</body>
+</html>
